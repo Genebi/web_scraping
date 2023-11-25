@@ -24,5 +24,6 @@ trio-websocket==0.11.1
 tzdata==2023.3
 undetected-chromedriver==3.5.4
 urllib3==2.1.0
+validators==0.22.0
 websockets==12.0
 wsproto==1.2.0
