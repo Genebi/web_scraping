@@ -10,6 +10,10 @@ from selenium.webdriver.common.keys import Keys
 import undetected_chromedriver as uc
 from openpyxl import Workbook
 import sys
+import ssl
+
+# La linea del SSL es necesaria para la ejecucion en MacOs
+ssl._create_default_https_context = ssl._create_unverified_context
 
 # El error que tenia con undetected_chromedriver lo solucione editando 
 # el archivo __init__.py en la linea 799 agregué el try-except
