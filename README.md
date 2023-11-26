@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-By the moment you will need to get your own URL from Indeed website and pass it as argument in the script, as the example below
+You need to pass the job you are looking for and location (optional) as arguments to search all the jobs 
 
 ### Mac OS
 ```python
