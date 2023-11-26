@@ -15,12 +15,12 @@ By the moment you will need to get your own URL from Indeed website and pass it 
 
 ### Mac OS
 ```python
-python3 indeed_scraping.py "https://mx.indeed.com/jobs?q=php&l=&from=searchOnHP&vjk=ab8e2d4c5c516867"
+python3 indeed_scraping.py "python" "remoto"
 ```
 
 ### Windows
 ```python
-python indeed_scraping.py "https://mx.indeed.com/jobs?q=php&l=&from=searchOnHP&vjk=ab8e2d4c5c516867"
+python indeed_scraping.py "python" "remoto"
 ```
 
 ## Contributing
