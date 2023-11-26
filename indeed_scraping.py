@@ -12,6 +12,7 @@ from openpyxl import Workbook
 import sys
 import ssl
 import validators
+import search_jobs as sj
 
 # If you have an issue related to undetected_chromedriver go to undetected_chromedriver module
 # and edit line 799 more or less in file __init__.py and put the time.sleep(0.1) inside a try-except
@@ -23,12 +24,21 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 if __name__ == '__main__':
     
-    if len(sys.argv) <= 1:
-        print("Es necesario pasar la URL como argumento.\nEjemplo: https://mx.indeed.com/jobs?q=php&l=&from=searchOnHP&vjk=ab8e2d4c5c516867")
-        exit()
+    what_job = None
+    location = None
+    
+    match len(sys.argv):
+        case 1:
+            print("Es necesario pasar el trabajo a buscar como argumento.\nEjemplo: 'Python'")
+            exit()
+        case 2:
+            what_job = sys.argv[1]
+        case 3:
+            what_job = sys.argv[1]
+            location = sys.argv[2]
     
     # URL as argument
-    url = sys.argv[1]
+    url = sj.search_and_get_url(what_job, location)
     
     if validators.url(url):
 
